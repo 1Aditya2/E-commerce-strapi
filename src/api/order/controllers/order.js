@@ -5,6 +5,7 @@
  */
 
 const { createCoreController } = require("@strapi/strapi").factories;
+// @ts-ignore
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 module.exports = createCoreController("api::order.order", ({ strapi }) => ({
